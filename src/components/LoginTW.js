@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimationRevealPage from './AnimationRevealPage'
 import { Container as ContainerBase } from './Layouts'
 import tw from 'twin.macro'
 import styled from 'styled-components'
@@ -54,6 +55,7 @@ class LoginTW extends React.Component {
 
     render() {
         return (
+        <AnimationRevealPage>
             <Container>
             <Content>
               <MainContainer>
@@ -74,6 +76,7 @@ class LoginTW extends React.Component {
               </IllustrationContainer>
             </Content>
           </Container>
+        </AnimationRevealPage>
                 )
     }
 }
