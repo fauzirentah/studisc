@@ -7,7 +7,7 @@ import LandingPage from './components/LandingPage'
 import ServiceLandingPage from './components/ServiceLandingPage'
 import BlogIndex from './components/BlogIndex'
 import BlogIndexC from './components/BlogIndexC'
-import NavBar from './components/NavBar'
+import Logout from './components/Logout'
 import Header from './components/headers/light'
 import gapiUtils from './gapi-utils'
 import './App.css'
@@ -64,6 +64,7 @@ class App extends React.Component {
                             <ServiceLandingPage />
                         </Route>
                         <Route path="/dashboard" render={() => this.ifUserSignedIn(BlogIndexC, {profile: this.state.profile})}/>
+                        <Route path="/logout" render={() => this.ifUserSignedIn(Logout, {profile: this.state.profile})}/>
                     </Switch>
                 </BrowserRouter>
             </div>

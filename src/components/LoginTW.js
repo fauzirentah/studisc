@@ -15,6 +15,7 @@ const LogoLink = tw.a``;
 const LogoImage = tw.img`h-12 mx-auto`;
 const MainContent = tw.div`mt-12 flex flex-col items-center`;
 const Heading = tw.h1`text-2xl xl:text-3xl font-extrabold`;
+const Heading3 = tw.h3`xl:text-xl`;
 const FormContainer = tw.div`w-full flex-1 mt-8`;
 
 const SocialButtonsContainer = tw.div`flex flex-col items-center`;
@@ -64,6 +65,7 @@ class LoginTW extends React.Component {
                 </LogoLink>
                 <MainContent>
                   <Heading>Sign In To sDiscount</Heading>
+                  <Heading3>Use your student's email</Heading3>
                   <FormContainer>
                     <SocialButtonsContainer>
                     <gButtonContainer id="login-button"></gButtonContainer>

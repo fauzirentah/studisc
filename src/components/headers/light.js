@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import gapiUtils from "../../gapi-utils";
 
 import useAnimatedNavToggler from '../helpers/useAnimatedNavToggler'
 
@@ -76,7 +77,7 @@ export default (props, { roundedHeaderButton = false, logoLink, links, className
       <NavLink href="#">Support</NavLink>
       <NavLink href="#">Contact Us</NavLink>
       <NavLink href="#">{ props.email }</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/">Logout</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/" onClick={ gapiUtils.signOut }>Logout</PrimaryLink>
     </NavLinks>
   ];
 
