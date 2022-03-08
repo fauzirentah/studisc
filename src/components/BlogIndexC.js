@@ -45,7 +45,7 @@ const Description = tw.div``;
 const ButtonContainer = tw.div`flex justify-center`;
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
-export default ({
+const BlogIndexC = (props, {
   headingText = "Student Discounts",
   posts = [
     {
@@ -74,9 +74,14 @@ export default ({
   const onLoadMoreClick = () => {
     setVisible(v => v + 6);
   };
+
+  const email = props.profile.getEmail();
+  const imageUrl = props.profile.getImageUrl();
+  const name = props.profile.getName();
+
   return (
     <AnimationRevealPage>
-      <Header />
+      <Header email={email} imageUrl={imageUrl} name={name} />
       <Container>
         <ContentWithPaddingXl>
           <HeadingRow>
@@ -107,6 +112,8 @@ export default ({
     </AnimationRevealPage>
   );
 };
+
+export default BlogIndexC;
 
 const getPlaceholderPost1 = () => ({
   imageSrc:

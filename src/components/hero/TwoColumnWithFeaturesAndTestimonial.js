@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import HeaderBase, { NavLinks, NavLink, PrimaryLink } from '../headers/light'
+import HeaderBase, { NavLinks, NavLink, PrimaryLink } from '../headers/lightdef'
 import { SectionHeading } from '../misc/Headings'
 import { SectionDescription } from '../misc/Typography'
 import { PrimaryButton as PrimaryButtonBase } from '../misc/Buttons'
@@ -10,8 +10,6 @@ import { Container, ContentWithVerticalPadding } from '../misc/Layouts'
 import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 import { ReactComponent as QuotesLeftIconBase } from '../images/quotes-l.svg'
 import { ReactComponent as SvgDecoratorBlob1 } from '../images/dot-pattern.svg'
-import NavBar from '../NavBar'
-import gapiUtils from '../../gapi-utils'
 
 const Header = tw(HeaderBase)`max-w-none`;
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
@@ -41,7 +39,7 @@ const CustomerCompany = tw.p`mt-1 text-sm text-gray-500`
 export default ({
   heading = "Fast, free, exclusive deals for students.",
   description = "Get FREE, instant access to student discount. Join us today, and start saving with big retailers like Cotton On, TGV, Apple, Typo and more",
-  imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+  imageSrc = "https://images.unsplash.com/photo-1618355776464-8666794d2520?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   imageDecoratorBlob = true,
   primaryButtonUrl = "/dashboard",
   primaryButtonText = "Get Started",
@@ -49,8 +47,8 @@ export default ({
   features = ["No student card needed", "Premium retailers", "Enjoy discounts 24/7"],
   testimonial = {
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    customerName: "Charlotte Hale",
-    customerCompany: "Delos Inc."
+    customerName: "Sara Abdullah",
+    customerCompany: "University Malaya"
   }
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
@@ -58,7 +56,6 @@ export default ({
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
       <NavLink href="/#">Support</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
       <NavLink href="/#">Testimonials</NavLink>

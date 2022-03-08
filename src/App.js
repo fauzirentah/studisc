@@ -6,7 +6,9 @@ import LoginTW from './components/LoginTW'
 import LandingPage from './components/LandingPage'
 import ServiceLandingPage from './components/ServiceLandingPage'
 import BlogIndex from './components/BlogIndex'
+import BlogIndexC from './components/BlogIndexC'
 import NavBar from './components/NavBar'
+import Header from './components/headers/light'
 import gapiUtils from './gapi-utils'
 import './App.css'
 import 'bulma/css/bulma.min.css'
@@ -50,21 +52,18 @@ class App extends React.Component {
             }
 
         }
-        // return this.state.isSignedIn ? <Component {...props} /> : <LoginPage/>
         return this.state.isSignedIn ? <Component {...props} /> : <LoginTW/>
     }
 
     render() {
-        const email = this.state.isSignedIn ? this.state.profile.getEmail() : ''
-        const imageUrl = this.state.isSignedIn ? this.state.profile.getImageUrl(): ''
         return (
             <div>
                 <BrowserRouter>
                     <Switch>
                         <Route exact path="/">
-                            <BlogIndex />
+                            <ServiceLandingPage />
                         </Route>
-                        <Route path="/dashboard" render={() => this.ifUserSignedIn(Dashboard, {profile: this.state.profile})}/>
+                        <Route path="/dashboard" render={() => this.ifUserSignedIn(BlogIndexC, {profile: this.state.profile})}/>
                     </Switch>
                 </BrowserRouter>
             </div>

@@ -63,7 +63,7 @@ class LoginTW extends React.Component {
                   <LogoImage src={logo} />
                 </LogoLink>
                 <MainContent>
-                  <Heading>Sign In To Pick</Heading>
+                  <Heading>Sign In To sDiscount</Heading>
                   <FormContainer>
                     <SocialButtonsContainer>
                     <gButtonContainer id="login-button"></gButtonContainer>

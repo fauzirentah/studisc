@@ -56,7 +56,7 @@ export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
 
-export default (props, { roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
+export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -72,10 +72,9 @@ export default (props, { roundedHeaderButton = false, logoLink, links, className
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">About</NavLink>
-      <NavLink href="#">Support</NavLink>
-      <NavLink href="#">Contact Us</NavLink>
-      <NavLink href="#">{ props.email }</NavLink>
+      <NavLink href="/#">About</NavLink>
+      <NavLink href="/#">Support</NavLink>
+      <NavLink href="/#">Contact Us</NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/">Logout</PrimaryLink>
     </NavLinks>
   ];
@@ -84,9 +83,9 @@ export default (props, { roundedHeaderButton = false, logoLink, links, className
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="#">
-      <img alt="profile" height="32" width="32" src={props.imageUrl}/>
-      { props.name }
+    <LogoLink href="/">
+      <img src={logo} alt="logo" />
+      sDiscount
     </LogoLink>
   );
 
