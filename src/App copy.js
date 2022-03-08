@@ -58,6 +58,7 @@ class App extends React.Component {
         const imageUrl = this.state.isSignedIn ? this.state.profile.getImageUrl(): ''
         return (
             <div>
+                <NavBar email={email} imageUrl={imageUrl} signOut={() => this.signOut()}/>
                 <BrowserRouter>
                     <Switch>
                         <Route exact path="/">

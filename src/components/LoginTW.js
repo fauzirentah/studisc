@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimationRevealPage from './AnimationRevealPage'
+import AnimationRevealPage from './helpers/AnimationRevealPage'
 import { Container as ContainerBase } from './Layouts'
 import tw from 'twin.macro'
 import styled from 'styled-components'
