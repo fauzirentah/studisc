@@ -5,6 +5,7 @@ import LoginPage from './components/LoginPage'
 import LoginTW from './components/LoginTW'
 import LandingPage from './components/LandingPage'
 import ServiceLandingPage from './components/ServiceLandingPage'
+import BlogIndex from './components/BlogIndex'
 import NavBar from './components/NavBar'
 import gapiUtils from './gapi-utils'
 import './App.css'
@@ -61,7 +62,7 @@ class App extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path="/">
-                            <ServiceLandingPage />
+                            <BlogIndex />
                         </Route>
                         <Route path="/dashboard" render={() => this.ifUserSignedIn(Dashboard, {profile: this.state.profile})}/>
                     </Switch>
