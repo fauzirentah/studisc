@@ -64,7 +64,7 @@ class LoginTW extends React.Component {
                   <LogoImage src={logo} />
                 </LogoLink>
                 <MainContent>
-                  <Heading>Sign In To sDiscount</Heading>
+                  <Heading>Sign In To AGrade</Heading>
                   <Heading3>Use your student's email</Heading3>
                   <FormContainer>
                     <SocialButtonsContainer>
